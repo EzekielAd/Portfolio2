@@ -11,9 +11,9 @@ router.get('/home', function(req, res, next) {
   res.render('index', { title: 'Home Page' });
 });
 
-/* GET About us Page. */
+/* GET About me Page. */
 router.get('/about', function(req, res, next) {
-  res.render('About', { title: 'About Us' });
+  res.render('About', { title: 'About me' });
 });
 
 /* GET Project page. */
@@ -21,9 +21,9 @@ router.get('/project', function(req, res, next) {
   res.render('Projects', { title: 'Projects Page' });
 });
 
-/* GET Contact us page. */
+/* GET Contact me page. */
 router.get('/contact', function(req, res, next) {
-  res.render('Contact', { title: 'Contact Us' });
+  res.render('Contact', { title: 'Contact me' });
 });
 module.exports = router;
 
