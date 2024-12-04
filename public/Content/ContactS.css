@@ -22,6 +22,49 @@ body::before {
     z-index: -1; /* Ensure the overlay is behind the content */
 }
 
+.navbar-brand {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+.navbar .container {
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Aligns content vertically */
+  }
+  
+  .navbar h6 {
+    font-size: 0.9rem; /* Adjust font size to match the rest of your site */
+    font-weight: 500; /* Semi-bold for a balanced look */
+    margin: 0; /* Ensure no extra space around */
+    padding: 0; /* Removes unwanted padding */
+    line-height: 1.5; /* Adjust height if needed */
+    color: #ffffff; /* Consistent text color */
+  }
+  
+  
+  .navbar .social-icons {
+    display: flex; /* Aligns icons horizontally */
+    align-items: center; /* Aligns icons vertically with text */
+    gap: 10px; /* Uniform spacing between icons */
+  }
+  
+  .navbar .social-icons a {
+    font-size: 1.1rem; /* Matches icon size with text */
+    text-decoration: none; /* Removes any underline from links */
+    color: #ffffff; /* Icon and text color */
+    transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover effect */
+  }
+  
+  .navbar .social-icons a:hover {
+    transform: scale(1.2); /* Slightly enlarges icons on hover */
+    color: #0077b5; /* Optional: Add hover color */
+  }
+  
+  .navbar .social-icons a i {
+    display: flex;
+    align-items: center;
+  }
+  
+  
 /* Adjust text color for white text */
 .col-lg-6 {
     color: white;

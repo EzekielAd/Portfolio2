@@ -18,6 +18,9 @@ body {
     background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 30% opacity (adjust as needed) */
     z-index: -1; /* Ensure overlay is behind the content */
   }
+  .navbar-brand {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
   
   .homepage-container {
     display: flex;
@@ -48,7 +51,8 @@ body {
   }
   
   .text-container h1 {
-    font-size: 4rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:3.7rem;
     color: white;
     margin: 0 0 10px;
   }
@@ -56,6 +60,30 @@ body {
   .text-container p {
     font-size: 1.2rem;
     color: #6c757d;
+  }
+  
+.navbar {
+    padding: 10px 0; /* Adjust spacing inside the navbar */
+  }
+  
+  .navbar h6 {
+    font-size: 0.9rem; /* Adjust text size */
+    margin-bottom: 0; /* Remove default margin */
+    color: white; /* Ensure consistent text color */
+  }
+  .social-icons a {
+    font-size: 1.2rem; /* Adjust icon size */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.2s ease; /* Smooth scaling on hover */
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    color: #e1306c; /* Optional: Instagram pink for Instagram */
+  }
+  
+  .social-icons a:last-child:hover {
+    color: #0077b5; /* Optional: LinkedIn blue for LinkedIn */
   }
   
   @media (max-width: 768px) {
