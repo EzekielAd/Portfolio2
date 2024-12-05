@@ -54,33 +54,53 @@
     <!--Contact Form-->
     <section id="contact">
       <div class="container-lg">
-        <div class="text-center">
-          <h1 class="display-5">What would you like to know?</h1>
-        </div>
-  
-        <div class="row justify-content-center my-5">
-          <div class="col-lg-6">
-            <form>
-              <label for="name" class="form-label">Name:</label>
-              <input type="text" class="form-control" id="name" placeholder="e.g. Mario" required>
-  
-              <label for="email" class="form-label">Email Address:</label>
-              <input type="email" class="form-control" id="email" placeholder="e.g.mario@example.com" required>
-  
-              <div class="form-floating mb-4 mt-5">
-                <textarea id="query" class="form-control" style="height: 140px"></textarea>
-                <label for="query" class="form-label">Your query...</label>
-              </div>
-  
-              <div class="mb-4 text-center">
-                <button type="submit" class="btn btn-secondary">Submit</button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
-              </div>
-            </form>
+          <div class="text-center">
+              <h1 class="display-5">What would you like to know?</h1>
           </div>
-        </div>
+  
+          <div class="row justify-content-center my-5">
+              <div class="col-lg-6">
+                  <!-- Create a form that submits via JavaScript -->
+                  <form id="contact-form">
+                      <label for="name" class="form-label">Name:</label>
+                      <input type="text" class="form-control" id="name" name="name" placeholder="e.g. Mario" required>
+  
+                      <label for="email" class="form-label">Email Address:</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="e.g.mario@example.com" required>
+  
+                      <div class="form-floating mb-4 mt-5">
+                          <textarea id="query" class="form-control" name="message" style="height: 140px" required></textarea>
+                          <label for="query" class="form-label">Your query...</label>
+                      </div>
+  
+                      <div class="mb-4 text-center">
+                          <button type="submit" class="btn btn-secondary">Submit</button>
+                          <button type="reset" class="btn btn-secondary">Reset</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
       </div>
-    </section>
+  </section>
+  
+  <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();  // Prevent the form from submitting normally
+  
+          // Get the form data
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('query').value;
+  
+          // Construct the Gmail compose URL
+          const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=blurrzyy18@gmail.com&su=New%20Query%20from%20${encodeURIComponent(name)}&body=From:%20${encodeURIComponent(email)}%0A%0A${encodeURIComponent(message)}`;
+  
+          // Open Gmail compose in a new tab
+          window.open(gmailUrl, '_blank');
+      });
+  </script>
+  
+
     
 <!-- Bottom Nav Bar -->
 <nav class="navbar fixed-bottom navbar-dark bg-dark">
@@ -96,6 +116,7 @@
     </div>
   </div>
 </nav>
+
 
   
 
