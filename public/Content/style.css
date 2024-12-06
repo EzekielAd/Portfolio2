@@ -29,38 +29,40 @@ body {
     height: 100vh;
     padding: 20px;
     flex-wrap: wrap;
-  }
-  
-  .image-container {
+    gap: 70px; /* Increased gap for more space between image and text */
+}
+
+.image-container {
     flex-shrink: 0;
-    margin-right: 20px;
-  }
-  
-  .image-container img {
+    margin-right: 40px; /* Additional margin on the right of the image */
+}
+
+.image-container img {
     width: 500px;
     height: 500px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .text-container {
+}
+
+.text-container {
     max-width: 600px;
     text-align: center;
-    margin-left: 390px;
-  }
-  
-  .text-container h1 {
+    padding: 20px;
+}
+
+.text-container h1 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size:3.7rem;
+    font-size: 3.7rem;
     color: white;
     margin: 0 0 10px;
-  }
-  
-  .text-container p {
+}
+
+.text-container p {
     font-size: 1.2rem;
     color: #6c757d;
-  }
+}
+
   
 .navbar {
     padding: 10px 0; /* Adjust spacing inside the navbar */
