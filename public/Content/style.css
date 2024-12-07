@@ -11,13 +11,13 @@ body {
 /* Dark overlay to make text more visible */
 body::before {
   content: '';
-  position: fixed; /* Change from absolute to fixed to ensure it spans the full viewport */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw; /* Use viewport width for consistent coverage */
-  height: 100vh; /* Use viewport height for consistent coverage */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-  z-index: -1; /* Ensure it stays behind content */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 
@@ -99,11 +99,22 @@ body::before {
   
     .image-container img {
       width: 200px;
-      height: 200px;
+      height: auto;
     }
   
     .text-container {
       margin-top: 20px;
-    }
+      padding: 10px; /* Add breathing room */
+      color: white; /* Ensure text is visible */
+  }
+  
+  .text-container h1 {
+      font-size: 2rem; /* Reduce font size for smaller screens */
+  }
+  
+  .text-container p {
+      font-size: 1rem; /* Adjust paragraph text size */
+  }
+  
   }
   
