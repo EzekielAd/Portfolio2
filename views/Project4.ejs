@@ -7,7 +7,7 @@
     <title><%= title %></title>
 
     <!--CSS-->
-    <link rel='stylesheet' href='/Content/About.css' />
+    <link rel='stylesheet' href='/Content/Projectfacts.css' />
     <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css" />
     <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css" />
   </head>
@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
 
-      <a class="navbar-brand" href="/"><i class="fa-solid fa-user fa-lg"></i></a>
+        <a class="navbar-brand" href="/">  Zeke The Data Freak</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,16 +34,6 @@
           <% } %>
             <i class="fa-solid fa-lg fa-house-user"></i>
             Home</a>
-          </li>
-
-            <li class="nav-item">
-          <% if (title == "About me") { %>
-            <a class="nav-link active" href="/about">
-          <% } else { %>
-           <a class="nav-link" href="/about">
-          <% } %>
-            <i class="fa-solid fa-lg fa-circle-question"></i>
-            About me</a>
           </li>
             <li class="nav-item">
           <% if (title == "Contact me") {%>
@@ -69,22 +59,29 @@
   </nav>
 </header>
 
+<button class="btn btn-primary" onclick="window.location.href='/project';">Back to the Projects</button>
 
+<!--Image and Text-->
+<div class="project-container">
+  <img src="/Content/Project4.png" alt="Project 1" class="project-image">
+  <div class="project-description">
+    <h2>Project 4: Thematic map on Canada's Health Records</h2>
+    <hr class="divider">
+    <h3>Mortality rates per Municipality</h3>
+    <p>The map provides a detailed visual representation of male life expectancy across Whitby, Ajax, and Oshawa, offering an insightful analysis of the data. Each point on the map is labeled with the corresponding street name, the time period during which the data was collected, and the specific life expectancy value for that location.</p>
 
-<div class="container">
-  <div class="text-container">
-    <h1 class="display-4">Heres some info <%= title %></h1>
-  </div>
-  <div class="About-content">
-    <div class="video-container">
-      <video id="video" controls width="300" height="200" poster="miniMe.jpg" loop preload="auto" autoplay muted>
-        <source src="Content/introduce.mp4" type="video/mp4">
-        <source src="Content/ogvVideo.ogv" type="video/ogv">
-      </video>
-      <img src="Content/Aboutpic.jpg" alt="Profile Image" class="profile-image">
-    </div>
-  </div>
+    <p>To enhance clarity, the points are sized proportionally to the life expectancy values, allowing for a quick and intuitive understanding of the distribution. Larger points indicate higher life expectancy, while smaller points highlight areas with lower values. </p>
+        
+    <p>From this visualization, distinct trends emerge: Oshawa consistently shows significantly lower life expectancy values compared to Ajax, which demonstrates relatively higher rates. This stark contrast emphasizes the disparities between these regions and invites further exploration into the underlying factors contributing to these differences.
+      The map gives a physical demonstration of the life expectancy of each male in Whitby, Ajax and Oshawa. Each point being labelled with the street name the timeline in which this data was collected and the life expectancy. Each point being sized differently based on the values, and from this we can see that Oshawa has alot lower numbers compared to Ajax which has relatively higher rates.
+    </p>
+  </div>  
 </div>
+
+
+
+    
+
 
 <!-- Bottom Nav Bar -->
 <nav class="navbar fixed-bottom navbar-dark bg-dark">
@@ -105,7 +102,6 @@
 <script src="/Scripts/app.js>"></script>
 <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/jquery/dist/jquery.min.js"></script>
-
 
 </div>
   </body>

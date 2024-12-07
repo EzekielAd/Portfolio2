@@ -7,7 +7,7 @@
     <title><%= title %></title>
 
     <!--CSS-->
-    <link rel='stylesheet' href='/Content/About.css' />
+    <link rel='stylesheet' href='/Content/Projectfacts.css' />
     <link rel='stylesheet' href="/bootstrap/dist/css/bootstrap.min.css" />
     <link rel='stylesheet' href="/@fortawesome/fontawesome-free/css/all.min.css" />
   </head>
@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
 
-      <a class="navbar-brand" href="/"><i class="fa-solid fa-user fa-lg"></i></a>
+        <a class="navbar-brand" href="/">  Zeke The Data Freak</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -34,16 +34,6 @@
           <% } %>
             <i class="fa-solid fa-lg fa-house-user"></i>
             Home</a>
-          </li>
-
-            <li class="nav-item">
-          <% if (title == "About me") { %>
-            <a class="nav-link active" href="/about">
-          <% } else { %>
-           <a class="nav-link" href="/about">
-          <% } %>
-            <i class="fa-solid fa-lg fa-circle-question"></i>
-            About me</a>
           </li>
             <li class="nav-item">
           <% if (title == "Contact me") {%>
@@ -69,22 +59,27 @@
   </nav>
 </header>
 
+<button class="btn btn-primary" onclick="window.location.href='/project';">Back to the Projects</button>
 
-
-<div class="container">
-  <div class="text-container">
-    <h1 class="display-4">Heres some info <%= title %></h1>
-  </div>
-  <div class="About-content">
-    <div class="video-container">
-      <video id="video" controls width="300" height="200" poster="miniMe.jpg" loop preload="auto" autoplay muted>
-        <source src="Content/introduce.mp4" type="video/mp4">
-        <source src="Content/ogvVideo.ogv" type="video/ogv">
-      </video>
-      <img src="Content/Aboutpic.jpg" alt="Profile Image" class="profile-image">
-    </div>
-  </div>
+<!--Image and Text-->
+<div class="project-container">
+  <img src="/Content/Project1.png" alt="Project 1" class="project-image">
+  <div class="project-description">
+    <h3>Project 1: Dashboard on Canada's CPI(Consumer Price Index)</h3>
+    <hr class="divider">
+    <h3>Trends in Prices</h3>
+    <p>
+      This dashboard gives a visual demonstration of the changes in prices over the years on major elements like gasoline, energy or electricity, living and basic goods and services. the initial spike in 2008 coincided with a significant financial crisis that triggered a recession, primarily due to the collapse of the housing market, leading to widespread economic instability and reduced consumer spending on oil. From 2011 to 2014, prices steadily increased, driven by economic recovery, ongoing conflicts in oil-producing regions such as the Middle East, and concerns about potential supply disruptions.
+    </p>
+    <p>Additionally, natural disasters like Hurricane Sandy in 2012 affected refining capacity and distribution, exerting upward pressure on prices. In 2022, the COVID-19 pandemic led to a dramatic price surge. Initially, prices dropped sharply in early 2020 as lockdowns drastically reduced demand.
+      However, as economies began to reopen, demand surged, resulting in a rapid increase in prices. A similar pattern is evident in the energy sector during the corresponding years.</p>
+  </div>  
 </div>
+
+
+
+    
+
 
 <!-- Bottom Nav Bar -->
 <nav class="navbar fixed-bottom navbar-dark bg-dark">
@@ -105,7 +100,6 @@
 <script src="/Scripts/app.js>"></script>
 <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/jquery/dist/jquery.min.js"></script>
-
 
 </div>
   </body>

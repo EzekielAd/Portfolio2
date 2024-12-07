@@ -1,0 +1,193 @@
+
+body {
+    background-image: url('background-img-facts.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh; 
+  }
+  
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 30% opacity (adjust as needed) */
+    z-index: -1; /* Ensure overlay is behind the content */
+  }
+  .navbar-brand {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  h1.display-4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.5rem; /* Adjust the size as needed */
+    font-weight: bold; /* Make it bold */
+    color: white; /* Dark color for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Optional: Add subtle text shadow */
+    margin-bottom: 30px; /* Adjust the bottom margin */
+  }
+
+  .heading h1 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+/* Apply custom styles to all buttons */
+button.btn {
+  color: black !important;  /* Force text color to white */
+  background-color: white!important;  /* Set the background color */
+  border: 2px solid white !important;  /* Set the border color */
+  font-weight: bold !important;  /* Make the text bold */
+  padding: 10px 20px;  /* Button padding */
+  font-size: 16px;  /* Font size */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Change hover state */
+button.btn:hover {
+  background-color: purple !important;  /* Darker background */
+  border-color: purple !important;  /* Darker border */
+  color: white !important;  /* Ensure text stays white */
+}
+/* Wrapper for project image and description */
+.project-container {
+  display: flex; /* Aligns the image and text side by side */
+  align-items: center; /* Vertically centers both the image and the text */
+  justify-content: space-between; /* Space out the image and text */
+  margin: 50px 0; /* Adds margin around the container */
+  color: #fff; /* Makes the text white */
+}
+
+/* Style for the image */
+.project-image {
+  width: 50%; /* Image takes up half the width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Adds rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  margin-left: 20px; /* Adds some space between the text and image */
+}
+
+/* Style for the description */
+.project-description {
+  width: 50%; /* Text takes up the other half of the container */
+  text-align: left; /* Align text to the left */
+  padding: 20px; /* Padding for space inside the text box */
+}
+
+/* Project Title */
+.project-description h3 {
+  font-size: 32px; /* Large heading */
+  font-weight: bold;
+  margin-bottom: 15px; /* Adds space between the title and the description */
+  color: white; /* Makes the project title white */
+}
+
+/* Divider line */
+.divider {
+  border: 0;
+  border-top: 2px solid #fff; /* White line */
+  margin: 20px 0; /* Space around the line */
+}
+
+/* Description Subtitle */
+.project-description h3 {
+  font-size: 24px; /* Slightly smaller than the title */
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff; /* Makes the subtitle white */
+}
+
+/* Style for the project description paragraph */
+.project-description p {
+  font-size: 18px; /* Adjust font size for readability */
+  color: #fff; /* Makes the paragraph text white */
+  line-height: 1.6; /* Line height for better readability */
+}
+
+
+/*Navbar DONT CHANGE*/
+  .navbar {
+    padding: 10px 0; /* Adjust spacing inside the navbar */
+  }
+  
+  .navbar h6 {
+    font-size: 0.9rem; /* Adjust text size */
+    margin-bottom: 0; /* Remove default margin */
+    color: white; /* Ensure consistent text color */
+  }
+  .social-icons a {
+    font-size: 1.2rem; /* Adjust icon size */
+    text-decoration: none; /* Remove underline from links */
+    transition: transform 0.2s ease; /* Smooth scaling on hover */
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+    color: #e1306c; /* Optional: Instagram pink for Instagram */
+  }
+  
+  .social-icons a:last-child:hover {
+    color: #0077b5; /* Optional: LinkedIn blue for LinkedIn */
+  }
+  
+  @media screen and (max-width: 769px) {
+    .heading {
+        padding: 0 20px;
+    }
+
+    .heading h1 {
+        font-size: 36px;
+    }
+
+    .heading p {
+        font-size: 17px;
+        margin-bottom: 0;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .projects {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .projects-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .projects-content p {
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .projects-content .read-more {
+        font-size: 16px;
+    }
+
+      .project-container {
+        flex-direction: column; /* Stack the text and image vertically */
+        text-align: center; /* Center the text when stacked */
+      }
+    
+      .project-image {
+        width: 80%; /* Make the image smaller on mobile */
+        margin-left: 0; /* Remove left margin when stacked */
+        margin-top: 20px; /* Add some space above the image */
+      }
+    
+      .project-description {
+        width: 80%; /* Make the text box smaller on mobile */
+        margin-top: 20px; /* Add space above the text */
+      }
+    }
